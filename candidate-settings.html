@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Landing Page Template</title>
+  <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
+  <!-- Bootstrap , fonts & icons  -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="fonts/icon-font/css/style.css">
+  <link rel="stylesheet" href="fonts/typography-font/typo.css">
+  <link rel="stylesheet" href="fonts/fontawesome-5/css/all.css">
+  <!-- Plugin'stylesheets  -->
+  <link rel="stylesheet" href="plugins/aos/aos.min.css">
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="plugins/nice-select/nice-select.min.css">
+  <link rel="stylesheet" href="plugins/slick/slick.min.css">
+  <link rel="stylesheet" href="plugins/ui-range-slider/jquery-ui.css">
+  <!-- Vendor stylesheets  -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- w3 Script -->
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<body>
+  <div class="site-wrapper overflow-hidden bg-default-2">
+    <!-- Header start  -->
+    <!-- Navbar- -->
+    <div w3-include-html="./header.html"></div>
+    <!-- Login Modal -->
+    <div w3-include-html="./login.html"></div>
+    <!-- Sign Up Modal -->
+    <div w3-include-html="./signup.html"></div>
+    <!-- Header end -->
+    <div class="dashboard-sidebar-wrapper pt-11" id="sidebar">
+      <div class="brand-logo px-11">
+        <a href="https://shade.uxtheme.net/shade-pro">
+          <img src="image/logo-main-black.png" alt="">
+        </a>
+      </div>
+      <div class="my-15 px-11">
+        <a href="#" class="btn btn-primary btn-xl w-100 text-uppercase"><span class="mr-5 d-inline-block">+</span>Post a new job</a>
+      </div>
+      <ul class="list-unstyled dashboard-layout-sidebar">
+        <li class=""><a href="./dashboard-main.html" class="px-10 py-1 my-5 font-size-4 font-weight-semibold flex-y-center"><i class="icon icon-layout-11 mr-7"></i>Dashboard</a></li>
+        <li class=""><a href="dashboard-posted-jobs.html" class="px-10 py-1 my-5 font-size-4 font-weight-semibold flex-y-center"><i class="fas fa-briefcase mr-7"></i>Posted Jobs</a></li>
+        <li class=""><a href="dashboard-posted-applicants.html" class="px-10 py-1 my-5 font-size-4 font-weight-semibold flex-y-center"><i class="fas fa-user mr-7"></i>Applicants <span class="ml-auto px-1 h-1 bg-dodger text-white font-size-3 rounded-5 max-height-px-18 flex-all-center">14</span></a></li>
+        <li class="active"><a href="./dashboard-settings.html" class="px-10 py-1 my-5 font-size-4 font-weight-semibold flex-y-center"><i class="fas fa-cog mr-7"></i>Settings</a></li>
+      </ul>
+    </div>
+    <a class="sidebar-mobile-button" data-toggle="collapse" href="#sidebar" role="button" aria-expanded="false" aria-controls="sidebar">
+      <i class="icon icon-sidebar-2"></i>
+    </a>
+    <div class="dashboard-main-container mt-24 mt-lg-31" id="dashboard-body">
+      <div class="container">
+        <div class="mb-15 mb-lg-23">
+          <div class="row">
+            <div class="col-xxxl-9 px-lg-13 px-6">
+              <h5 class="font-size-6 font-weight-semibold mb-11">Update Company Profile</h5>
+              <div class="contact-form bg-white shadow-8 rounded-4 pl-sm-10 pl-4 pr-sm-11 pr-4 pt-15 pb-13">
+                <div class="upload-file mb-16 text-center">
+                  <div id="userActions" class="square-144 m-auto px-6 mb-7">
+                    <label for="fileUpload" class="mb-0 font-size-4 text-smoke">Browse or
+                      Drag and Drop</label>
+                    <input type="file" id="fileUpload" class="sr-only" />
+                  </div>
+                  <!-- <img id="imgPrime" src="" alt="uploaded image placeholder" /> -->
+                  <!-- <input type="file" id="upfile"> -->
+                </div>
+                <form action="/">
+                  <fieldset>
+                    <div class="row mb-xl-1 mb-9">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="namedash" class="d-block text-black-2 font-size-4 font-weight-semibold mb-4">Company Name</label>
+                          <input type="text" class="form-control h-px-48" id="namedash" placeholder="eg. Apple">
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="select2" class="d-block text-black-2 font-size-4 font-weight-semibold mb-4">Corporate Type</label>
+                          <select id="select2" class="form-control nice-select pl-6 arrow-3 h-px-48 w-100 font-size-4">
+                            <option>B2B</option>
+                            <option>B3B</option>
+                            <option>B4B</option>
+                            <option>B5B</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-8">
+                      <div class="col-lg-6 mb-xl-0 mb-7">
+                        <div class="form-group position-relative">
+                          <label for="select3" class="d-block text-black-2 font-size-4 font-weight-semibold mb-4">Employee Size </label>
+                          <select id="select3" class="form-control nice-select pl-6 arrow-3 h-px-48 w-100 font-size-4">
+                            <option>10-50</option>
+                            <option>50-70</option>
+                            <option>70-80</option>
+                            <option>80-90</option>
+                            <option>90-100</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group position-relative">
+                          <label for="address" class="d-block text-black-2 font-size-4 font-weight-semibold mb-4">Location or (Remote)</label>
+                          <select name="address" id="address" class="nice-select pl-6 h-px-48 arrow-3 w-100 font-size-4">
+                            <option value="">eg. New York, Namiv 201, USA</option>
+                            <option value="">eg. New York, Namiv 202, USA</option>
+                            <option value="">eg. New York, Namiv 203, USA</option>
+                            <option value="">eg. New York, Namiv 204, USA</option>
+                            <option value="">eg. New York, Namiv 205, USA</option>
+                          </select>
+                          <span class="h-100 w-px-50 pos-abs-tl d-flex align-items-center justify-content-center font-size-6"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="aboutTextarea" class="d-block text-black-2 font-size-4 font-weight-semibold mb-4">About Comapny</label>
+                          <textarea name="textarea" id="aboutTextarea" cols="30" rows="7" class="border border-mercury text-gray w-100 pt-4 pl-6" placeholder="Describe about the company what make it unique"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group mb-11">
+                          <label for="formGroupExampleInput" class="d-block text-black-2 font-size-4 font-weight-semibold mb-4">Company Website Link</label>
+                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="https://www.example.com">
+                        </div>
+                        <input type="button" value="Update Profile" class="btn btn-green btn-h-60 text-white min-width-px-210 rounded-5 text-uppercase">
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Vendor Scripts -->
+  <script src="js/vendor.min.js"></script>
+  <!-- Plugin's Scripts -->
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/nice-select/jquery.nice-select.min.js"></script>
+  <script src="plugins/aos/aos.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/counter-up/jquery.counterup.min.js"></script>
+  <script src="plugins/counter-up/jquery.waypoints.min.js"></script>
+  <script src="plugins/ui-range-slider/jquery-ui.js"></script>
+  <!-- Activation Script -->
+  <!-- <script src="js/drag-n-drop.js"></script> -->
+  <script src="js/custom.js"></script>
+  <!-- Import HTML files -->
+  <script>
+  w3.includeHTML();
+  </script>
+</body>
+
+</html>
